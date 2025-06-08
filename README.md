@@ -1,50 +1,129 @@
-# V-Lounge Spa System
+# V Lounge Spa Booking and Client Management System
 
-A web-based spa booking system that allows users to book spa services online.
+A modern web-based booking and management system for V Lounge Spa, designed to replace manual Excel-based processes with a digital solution.
 
 ## Features
 
-- User authentication using Firebase
-- Online booking system for spa services
-- Responsive design for all devices
-- Real-time booking management
+- 🔐 Secure Authentication System
+- 📅 Appointment Booking System
+- 👥 Client Management
+- 📊 Daily Reports
+- 📱 Responsive Design
+- 🔄 Real-time Updates
 
-## Setup
+## Technologies Used
 
-1. Clone the repository
-2. Create a Firebase project and enable Authentication and Firestore
-3. Replace the Firebase configuration in `firebase-config.js` with your own
-4. Add the Firebase SDK to your HTML files:
-   ```html
-   <script src="https://www.gstatic.com/firebasejs/9.x.x/firebase-app.js"></script>
-   <script src="https://www.gstatic.com/firebasejs/9.x.x/firebase-auth.js"></script>
-   <script src="https://www.gstatic.com/firebasejs/9.x.x/firebase-firestore.js"></script>
+- HTML5
+- CSS3 (Bootstrap 5)
+- JavaScript
+- Firebase Authentication
+- Firebase Firestore
+- Firebase Hosting
+
+## Setup Instructions
+
+1. **Clone the Repository**
+   ```bash
+   git clone [repository-url]
+   cd v-lounge-spa-system
    ```
+
+2. **Firebase Setup**
+   - Create a new Firebase project at [Firebase Console](https://console.firebase.google.com/)
+   - Enable Authentication (Email/Password)
+   - Enable Firestore Database
+   - Copy your Firebase configuration from Project Settings
+   - Paste the configuration in `firebase-config.js`
+
+3. **Local Development**
+   - Open `index.html` in your browser
+   - Or use a local server (recommended):
+     ```bash
+     # Using Python
+     python -m http.server 8000
+     # Using Node.js
+     npx serve
+     ```
+
+4. **Deployment**
+   - Install Firebase CLI:
+     ```bash
+     npm install -g firebase-tools
+     ```
+   - Login to Firebase:
+     ```bash
+     firebase login
+     ```
+   - Initialize Firebase:
+     ```bash
+     firebase init
+     ```
+   - Deploy:
+     ```bash
+     firebase deploy
+     ```
 
 ## Project Structure
 
 ```
 v-lounge-spa-system/
-│
-├── index.html                  # Login or Home Page
-├── dashboard.html             # Booking Form / Dashboard
-├── styles/
-│   └── style.css             # Custom CSS styling
-├── scripts/
-│   ├── auth.js              # Firebase login logic
-│   └── booking.js           # Booking form logic
-├── assets/                   # Images, icons, etc.
-│   └── logo.png
-├── firebase-config.js        # Firebase initialization
-└── README.md                 # Project documentation
+├── index.html              # Login page
+├── dashboard.html          # Main dashboard
+├── clients.html           # Client management
+├── css/
+│   └── styles.css         # Custom styles
+├── js/
+│   ├── firebase-config.js # Firebase configuration
+│   ├── auth.js           # Authentication logic
+│   ├── bookings.js       # Booking management
+│   └── clients.js        # Client management
+└── README.md
 ```
 
-## Technologies Used
+## Features in Detail
 
-- HTML5
-- CSS3
-- JavaScript
-- Firebase (Authentication & Firestore)
+1. **Authentication**
+   - Secure login system
+   - Password reset functionality
+   - Session management
+
+2. **Booking System**
+   - Service selection
+   - Date and time picker
+   - Real-time availability checking
+   - Booking confirmation
+
+3. **Client Management**
+   - Client profiles
+   - Booking history
+   - Contact information
+   - Service preferences
+
+4. **Reports**
+   - Daily booking summary
+   - Service popularity
+   - Revenue tracking
+
+## Developers
+
+This project was developed by students of BSIT231A – Information Technology at National University Laguna as part of the final project for IT Elective 1.
+
+### Team Members:
+
+| Name | Role |
+|------|------|
+| Cabugos, Arkin Jeiel D. | Project Lead |
+| Camacho, Christine Joy L. | UI/UX Designer |
+| Donadio, Aries S. | Backend Developer |
+| Pua, Gian J. | Frontend Developer |
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch
+3. Commit your changes
+4. Push to the branch
+5. Create a Pull Request
 
 ## License
 
