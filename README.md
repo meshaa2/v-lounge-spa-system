@@ -63,6 +63,29 @@ A modern web-based booking and management system for V Lounge Spa, designed to r
      firebase deploy
      ```
 
+## Default Admin Login
+
+The following admin accounts are set up for staff/admin access:
+
+| Email                   | Example Password |
+|-------------------------|------------------|
+| admin@vloungespa.com    | admin123         |
+| admin@gmail.com         | admin123         |
+
+> **Note:**
+> - You must create these users in Firebase Authentication and set their passwords (e.g., `admin123`).
+> - You can set any password you like, but be sure to remember it.
+> - If you forget the password, use the "Forgot Password?" link on the login page or reset it in the Firebase Console.
+
+**Admin Redirect:**
+- When logging in as an admin (using the above emails), you will always be redirected to the dashboard page (`dashboard.html`).
+- Other users will be redirected according to the logic in `js/auth.js`.
+
+**How to add/change admin users:**
+1. Go to Firebase Console → Authentication → Users.
+2. Click "Add user" and enter the desired email and password.
+3. To add more admin emails, update the `adminEmails` array in `js/auth.js`.
+
 ## Project Structure
 
 ```
