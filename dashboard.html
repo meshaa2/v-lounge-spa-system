@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V-Lounge Spa - Dashboard</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="assets/logo.png" alt="V-Lounge Spa Logo" class="logo">
+            <nav>
+                <button id="logout-btn">Logout</button>
+            </nav>
+        </header>
+        <main>
+            <div class="booking-container">
+                <h1>Book Your Spa Experience</h1>
+                <div id="booking-form">
+                    <!-- Booking form will be dynamically inserted here -->
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="firebase-config.js"></script>
+    <script src="scripts/auth.js"></script>
+    <script src="scripts/booking.js"></script>
+</body>
+</html> 
